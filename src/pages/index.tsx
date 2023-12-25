@@ -12,7 +12,7 @@ export default function Home() {
         <div className="text-center pt-[56px] text-white">
           <p>Hi there my name is</p>
           <p className="text-3xl pt-2">Raihan Siyun</p>
-          <p className="text-[#E2B714] text-3xl pt-2">Web / Mobile Developer</p>
+          <p className="text-[#E2B714] text-3xl font-mono pt-2">Web / Mobile Developer</p>
         </div>
       </main>
   );

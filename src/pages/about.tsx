@@ -20,7 +20,9 @@ export default function About() {
                         <li>Mars Coding As Course Instructor for kids</li>
                     </ul>
                 </div>
-                    <Image alt="Foto-Profile" className="h-[240px] w-[150px] pb-8 rounded object-cover" src={"/asset/rs-croped.jpeg"} width={300} height={200}></Image>
+                <div className="h-[240px] justify-center w-full flex">
+                    <Image alt="Foto-Profile" className="h-[240px] w-[150px] rounded object-cover" src={"/asset/rs-croped.jpeg"} width={300} height={200}></Image>
+                </div>
             </div>
             
         </main>

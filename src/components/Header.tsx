@@ -16,7 +16,9 @@ export default function Header() {
         <>
             <header className="text-white m-auto py-6 px-6">
                 <nav className="flex justify-between  items-center">
-                    <p className="text-xl font-mono">Raihan Siyun</p>
+                    <p className="text-xl font-mono font-bold">
+                        <Link href="/">Raihan Siyun</Link>
+                    </p>
                     <Bars3Icon onClick={() => setShowMenu(!showMenu)} className={`h-8 w-8 lg:hidden ${showMenu ? 'hidden' : 'block'}`} />
                     <ul className="hidden lg:block">
                         <li className="float-left p-2 pl-4">
