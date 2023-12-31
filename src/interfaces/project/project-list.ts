@@ -6,6 +6,7 @@ export interface ProjectList{
     tools: ToolFramework[];
     title: string;
     Image?: string;
+    slug: string;
     desc: string;
 }
 export interface ToolFramework{

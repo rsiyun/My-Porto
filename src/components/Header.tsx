@@ -1,9 +1,7 @@
-// import {  } from '@heroicons/react/24/solid'
-import { Bars3Icon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
+import Rsicon from "./Rsicon";
 export default function Header() {
     const [showMenu, setShowMenu] = useState(false);
     const router = useRouter();
@@ -19,7 +17,9 @@ export default function Header() {
                     <p className="text-xl font-mono font-bold">
                         <Link href="/">Raihan Siyun</Link>
                     </p>
-                    <Bars3Icon onClick={() => setShowMenu(!showMenu)} className={`h-8 w-8 lg:hidden ${showMenu ? 'hidden' : 'block'}`} />
+                    <div onClick={() => setShowMenu(!showMenu)}>
+                        <Rsicon icon="fas bars" classname={`h-8 w-8 lg:hidden ${showMenu ? 'hidden' : 'block'}`} />
+                    </div>
                     <ul className="hidden lg:block">
                         <li className="float-left p-2 pl-4">
                             <Link href="/">Home</Link>
@@ -38,7 +38,7 @@ export default function Header() {
             </header>
             <div className={`bg-white z-10 absolute left-0 right-0 top-0 bottom-0 ${showMenu ? 'flex' : 'hidden'}`}>
                 <div className="flex-col py-7 px-6 flex w-full">
-                    <button onClick={() => setShowMenu(!showMenu)} className="flex ml-auto"><XMarkIcon className="h-8 w-8"></XMarkIcon></button>
+                    <button onClick={() => setShowMenu(!showMenu)} className="flex ml-auto"><Rsicon icon="fas bars" classname="h-8 w-8"></Rsicon></button>
                     <div className="flex text-black flex-col items-center gap-10 font-semibold text-2xl">
                         <Link href="/">Home</Link>
                         <Link href="/about">About</Link>
