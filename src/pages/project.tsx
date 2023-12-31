@@ -1,5 +1,4 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { map } from "@trpc/server/observable";
 import Image from "next/image";
 import { useState } from "react";
 import { ProjectList } from "~/interfaces/project/project-list";
@@ -48,7 +47,7 @@ export default function Project() {
 const ProjectList = ({item, key}:{item: ProjectList, key: number}) =>{
     const [isHover, setIsHover] = useState(false);
 
-    let holdTimer:any;
+    let holdTimer: NodeJS.Timeout;
   
     const handleMouseEnter = () => {
       holdTimer = setTimeout(() => {
