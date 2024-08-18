@@ -1,13 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { project } from "~/classes/constantas/project";
 import Rsicon from "~/components/Rsicon";
-import { ProjectList } from "~/interfaces/project/project-list";
+import type { ProjectList as ProjectListType } from "~/interfaces/project/project-list";
 export default function Project() {
     const [search, setSearch] = useState<string>("");
-    const [projectL, setProject] = useState<ProjectList[]>();
+    const [projectL, setProject] = useState<ProjectListType[]>();
     const fetchProject = () =>{
-        let projectTemp:ProjectList[] = project;
+        let projectTemp:ProjectListType[] = project;
+        
         if (search) {
             projectTemp = projectTemp.filter(p=> p.title.toLowerCase().includes(search.toLowerCase()))
         }
@@ -36,7 +38,9 @@ export default function Project() {
                         <div className="grid lg:grid-cols-2 gap-4 pt-8 text-white">
                         {projectL?.map((item, index) => (
                             <div key={index}>
-                                <ProjectList item={item}></ProjectList>
+                                <Link href={`/project/${item.slug}`}>
+                                    <ProjectList item={item}></ProjectList>
+                                </Link>
                             </div>
                             ))}
                         </div>
@@ -47,7 +51,7 @@ export default function Project() {
     )
 }
 
-const ProjectList = ({item}:{item: ProjectList}) =>{
+const ProjectList = ({item}:{item: ProjectListType}) =>{
     const [isHover, setIsHover] = useState(false);
 
     let holdTimer: NodeJS.Timeout;
@@ -65,13 +69,15 @@ const ProjectList = ({item}:{item: ProjectList}) =>{
     return(
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="border-2 relative border-sky-400 flex-grow p-4 rounded min-h-[180px]">
             <div className={`z-10 absolute hidden lg:block  left-0 -top-[200px] h-[200px] overflow-hidden bg-white w-full transition-all duration-200 ease-linear rounded ${!isHover ? 'invisible opacity-0' : 'opacity-100 visible'}`}>
-                <Image alt="" src={"/asset/jala-web3.jpg"} width={400} height={200} className="h-full object-cover"></Image>
+                <Image alt="" src={item.HeroImage} width={400} height={200} className="h-full object-cover"></Image>
             </div>
             <h4 className="font-semibold text-xl font-mono pb-2">{item.title}</h4>
             <p>{item.desc}</p>
-            <div className="absolute bottom-4">
+            <div className="absolute bottom-4 flex gap-2">
                 {item.tools.map((tool, index)=>(
-                    <Image className="rounded" key={index} src={tool.img} alt={tool.alt} width={25} height={25}></Image>
+                    <Link href={tool.link}>
+                        <Image className="rounded" key={index} src={tool.img} alt={tool.alt} width={25} height={25}></Image>
+                    </Link>
                 ))}
             </div>
         </div>

@@ -1,10 +1,5 @@
-import {
-    IconLookup,
-    IconDefinition,
-    findIconDefinition,
-    IconPrefix,
-    IconName
-  } from '@fortawesome/fontawesome-svg-core'
+import { findIconDefinition} from '@fortawesome/fontawesome-svg-core'
+import type { IconLookup, IconDefinition, IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'

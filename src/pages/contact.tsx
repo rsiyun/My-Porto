@@ -1,8 +1,23 @@
 import Link from "next/link";
+import { useState } from "react";
+// import { setTimeout } from "timers/promises";
 import Rsicon from "~/components/Rsicon";
-
+// import {CopyToClipboard} from 'react-copy-to-clipboard';
+// import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function Contact() {
+    const [copy, setCopy] = useState<boolean>(false)
+    const copyText =  async (entryText:string)=>{
+        setCopy(true);
+        setTimeout(() => {
+            setCopy(false);
+          }, 1500);
+          try {
+            await navigator.clipboard.writeText(entryText);
+          } catch (error) {
+            console.error('Failed to copy text: ', error);
+          }
+      }
     return(
         <main className="flex-grow pt-6 px-6 pb-[72px] overflow-auto">
         <div className="flex justify-between flex-col-reverse lg:flex-row ">
@@ -20,7 +35,7 @@ export default function Contact() {
                                     <h4 className="font-semibold text-2xl font-mono">Email</h4>
                                 </div>
                                 <p className="pb-2 text-lg">rsiyun@gmail.com</p>
-                                <button className="bg-transparent border-2 border-sky-500 py-2 px-4 rounded flex items-center">Copy &nbsp;&nbsp; <Rsicon classname="h-3 w-3" icon="far clone"></Rsicon></button>
+                                <button onClick={()=>copyText("rsiyun@gmail.com")} className="hover:bg-sky-400 border-2 border-sky-500 py-2 px-4 rounded flex items-center">{copy? "Copied" : "Copy"} &nbsp;&nbsp; <Rsicon classname="h-3 w-3" icon="far clone"></Rsicon></button>
                             </div>
                             <div className="border-2 relative border-sky-400 flex-grow p-4 rounded min-h-[140px]">
                                 <div className="flex gap-2 items-center pb-2">

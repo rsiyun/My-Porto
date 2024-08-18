@@ -15,7 +15,7 @@ export default function About() {
                     <p className="font-bold mt-4">experience</p>
                     <ul className="list-disc pl-4">
                         <li>IT brain Solution As Web Developer</li>
-                        <li>3rd place in Cyber ​​Security LKS Jawa Timur province 2022</li>
+                        <li>3rd place in Cyber ​​Security LKS Jwa Timur province 2022</li>
                         <li>Binar Inovasi Digital As Mobile Developer </li>
                         <li>Mars Coding As Course Instructor for kids</li>
                     </ul>
