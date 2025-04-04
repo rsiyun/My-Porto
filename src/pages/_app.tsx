@@ -8,7 +8,7 @@ import Header from "~/components/Header";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div className="bg-[#181D31] min-h-screen antialiased py-6 px-6">
+    <div className="bg-background min-h-screen antialiased py-6 px-6">
       <div className="max-w-2xl mx-auto">
         <Header></Header>
         <Component {...pageProps} /> 

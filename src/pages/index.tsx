@@ -18,19 +18,19 @@ export default function Home() {
   return (
     <main className="space-y-10">
       <section id="hero" className="flex justify-between container">
-        <div className="text-left flex flex-col flex-1 text-white">
+        <div className="text-left flex flex-col flex-1">
           <div className="flex">
-            <p className="font-bold text-2xl inline-block md:text-5xl">Hi, I'm Raihan siyun <br />👋</p>
+            <p className="font-bold text-2xl inline-block md:text-5xl">Raihan siyun</p>
           </div>
           <div className="flex">
             <p className="text-base pt-2 md:text-xl inline-block max-w-[600px] capitalize">fullstack developer, software engineer, content creator</p>
           </div>
         </div>
-        <div className="w-[110px]">
+        {/* <div className="w-[110px] hidden md:block">
           <span className="relative flex shrink-0 overflow-hidden rounded-full size-28 border">
             <Image alt="raihan-siyun" className="h-full w-full aspect-square object-cover" src={"/asset/rs-croped.jpeg"} width={150} height={150}></Image>
           </span>
-        </div>
+        </div> */}
       </section>
       <section id="about">
         <div>
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
         <div>
           <p className="prose max-w-full text-pretty text-sm text-muted-foreground">
-            <span className="text-white italic">fullstack developer, software engineer </span> From Indonesia and an Adventure of my own mind, I like to express my feelings through code, and a quite place would be nice to have around me.
+            <span className="italic text-black">fullstack developer, software engineer </span> From Indonesia and an Adventure of my own mind, I like to express my feelings through code, and a quite place would be nice to have around me.
           </p>
         </div>
       </section>
@@ -119,7 +119,7 @@ export default function Home() {
               Contact
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl capitalize"> get in touch</h2>
-            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"><Link href={"/contact"} className="text-white underline">want to chat?</Link> just shoot me a dm</p>
+            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"><Link href={"/contact"} className="underline">want to chat?</Link> just shoot me a dm</p>
           </div>
         </div>
       </section>
@@ -133,7 +133,7 @@ const ProjectList = ({ item }: { item: ProjectListType }) => {
         <Image alt={item.HeroImage} src={item.HeroImage} width={500} height={500} className="rounded-xl mb-4 w-full"></Image>
       </div>
       <div className="px-4">
-        <h4 className="font-semibold text-xl font-mono pb-2">{item.title}</h4>
+        <h4 className="font-semibold text-xl pb-2">{item.title}</h4>
         <p>{item.desc}</p>
         <div className="mt-6 flex-row bottom-4 flex gap-2">
           {item.tools.map((tool, index) => (
@@ -148,8 +148,8 @@ const ProjectList = ({ item }: { item: ProjectListType }) => {
           ))}
         </div>
         <div className="flex flex-row gap-4 mt-6">
-          {item.preview != "" && <Link href={item.preview} target="_blank" className="w-full shadow-[0_0_0_3px_#000000_inset] text-center px-6 py-2 bg-transparent border border-white text-white rounded-[12px] font-bold transform hover:-translate-y-1 transition duration-400">Preview</Link>}
-          {item.github != "" && <a href={item.github} target="_blank" className="w-full shadow-[0_0_0_3px_#000000_inset] px-6 text-center py-2 bg-transparent border border-white text-white rounded-[12px] font-bold transform hover:-translate-y-1 transition duration-400">Code</a>}
+          {item.preview != "" && <Link href={item.preview} target="_blank" className="w-full shadow-[0_0_0_3px_#000000_inset] text-center px-6 py-2 bg-transparent border border-white rounded-[12px] font-bold transform hover:-translate-y-1 transition duration-400">Preview</Link>}
+          {item.github != "" && <a href={item.github} target="_blank" className="w-full shadow-[0_0_0_3px_#000000_inset] px-6 text-center py-2 bg-transparent border border-white rounded-[12px] font-bold transform hover:-translate-y-1 transition duration-400">Code</a>}
         </div>
       </div>
     </div>

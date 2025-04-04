@@ -34,14 +34,15 @@ const AccordionTrigger = React.forwardRef<React.ElementRef<typeof AccordionPrimi
       {...props}
     >
       <div className="flex flex-col w-full">
+          <p className="prose text-sm md:hidden block text-gray-500">{date}</p>
         <div className="flex justify-between">
-          <div className="flex justify-start items-center gap-2">
+          <div className="flex md:justify-start justify-between items-center w-full md:w-1/2 gap-2">
             {children}
             <ChevronDown className="h-4 w-4 shrink-0 group-data-[state=open]:rotate-180 text-muted-foreground transition-transform duration-200" />
           </div>
-          <p className="prose-invert text-sm">{date}</p>
+          <p className="prose text-sm text-gray-500 md:block hidden w-1/2 text-right">{date}</p>
         </div>
-        <p>{position}</p>
+        <p className="capitalize">{position}</p>
       </div>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>

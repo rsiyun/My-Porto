@@ -12,10 +12,10 @@ export default function Header() {
     }, [router.pathname]);
     return (
         <>
-            <header className="text-white m-auto pb-6 sm:pb-12">
+            <header className="m-auto pb-6 sm:pb-12">
                 <nav className="flex justify-between  items-center">
-                    <p className="text-xl font-mono font-bold">
-                        <Link href="/">Raihan Siyun</Link>
+                    <p className="text-xl font-bold">
+                        {/* <Link href="/">Raihan Siyun</Link> */}
                     </p>
                     <div onClick={() => setShowMenu(!showMenu)}>
                         <Rsicon icon="fas bars" classname={`h-8 w-8 lg:hidden ${showMenu ? 'hidden' : 'block'}`} />
