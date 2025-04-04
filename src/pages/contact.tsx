@@ -19,7 +19,7 @@ export default function Contact() {
           }
       }
     return(
-        <main className="flex-grow pt-6 px-6 pb-[72px] overflow-auto">
+        <main className="flex-grow pb-[72px] overflow-auto">
         <div className="flex justify-between flex-col-reverse lg:flex-row ">
             <div className="flex-grow">
                 <div className="text-white">
@@ -36,6 +36,18 @@ export default function Contact() {
                                 </div>
                                 <p className="pb-2 text-lg">rsiyun@gmail.com</p>
                                 <button onClick={()=>copyText("rsiyun@gmail.com")} className="hover:bg-sky-400 border-2 border-sky-500 py-2 px-4 rounded flex items-center">{copy? "Copied" : "Copy"} &nbsp;&nbsp; <Rsicon classname="h-3 w-3" icon="far clone"></Rsicon></button>
+                            </div>
+                            <div className="border-2 relative border-sky-400 flex-grow p-4 rounded min-h-[140px]">
+                                <div className="flex gap-2 items-center pb-2">
+                                    <Rsicon icon="fab whatsapp" classname="h-6 w-6"></Rsicon>
+                                    <h4 className="font-semibold text-2xl font-mono">Whatsapp</h4>
+                                </div>
+                                <div className="flex flex-col w-full">
+                                    <p className="pb-2 text-lg">rasi whatsapp</p>
+                                    <div>
+                                        <Link href={"http://wa.me/6281326555174"} className="bg-sky-400 py-2 px-4 rounded inline-block text-white font-bold">Visit &nbsp;&nbsp;<Rsicon classname="h-3 w-3" icon="fas long-arrow-alt-right"></Rsicon></Link>
+                                    </div>
+                                </div>
                             </div>
                             <div className="border-2 relative border-sky-400 flex-grow p-4 rounded min-h-[140px]">
                                 <div className="flex gap-2 items-center pb-2">
@@ -58,8 +70,16 @@ export default function Contact() {
                                     <Rsicon icon="fab instagram" classname="h-6 w-6"></Rsicon>
                                     <h4 className="font-semibold text-2xl font-mono">Instagram</h4>
                                 </div>
-                                <p className="pb-2 text-lg">siyoonnr</p>
-                                <Link href={"https://www.instagram.com/siyoonnr/"} className="bg-sky-400 py-2 px-4 rounded inline-block text-white font-bold">Visit &nbsp;&nbsp;<Rsicon classname="h-3 w-3" icon="fas long-arrow-alt-right"></Rsicon></Link>
+                                <p className="pb-2 text-lg">rasi.invite</p>
+                                <Link href={"https://www.instagram.com/rasi.invite/"} className="bg-sky-400 py-2 px-4 rounded inline-block text-white font-bold">Visit &nbsp;&nbsp;<Rsicon classname="h-3 w-3" icon="fas long-arrow-alt-right"></Rsicon></Link>
+                            </div>
+                            <div className="border-2 relative border-sky-400 flex-grow p-4 rounded min-h-[140px]">
+                                <div className="flex gap-2 items-center pb-2">
+                                    <Rsicon icon="fab tiktok" classname="h-6 w-6"></Rsicon>
+                                    <h4 className="font-semibold text-2xl font-mono">Tiktok</h4>
+                                </div>
+                                <p className="pb-2 text-lg">@rasiproduction</p>
+                                <Link href={"https://www.tiktok.com/@rasiproduction"} className="bg-sky-400 py-2 px-4 rounded inline-block text-white font-bold">Visit &nbsp;&nbsp;<Rsicon classname="h-3 w-3" icon="fas long-arrow-alt-right"></Rsicon></Link>
                             </div>
                         </div>
                     </div>

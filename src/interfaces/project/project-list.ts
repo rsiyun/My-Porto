@@ -11,9 +11,9 @@ export interface ProjectList{
     tools: ToolFramework[];
     title: string;
     HeroImage: string;
-    Images: Images[];
-    source: Enumsource
-    github: string
+    source: Enumsource;
+    github: string;
+    preview: string;
     slug: string;
     desc: string;
 }

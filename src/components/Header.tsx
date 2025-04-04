@@ -12,7 +12,7 @@ export default function Header() {
     }, [router.pathname]);
     return (
         <>
-            <header className="text-white m-auto py-6 px-6">
+            <header className="text-white m-auto pb-6 sm:pb-12">
                 <nav className="flex justify-between  items-center">
                     <p className="text-xl font-mono font-bold">
                         <Link href="/">Raihan Siyun</Link>
@@ -25,9 +25,6 @@ export default function Header() {
                             <Link href="/">Home</Link>
                         </li>
                         <li className="float-left p-2 pl-4">
-                            <Link href="/about">About</Link>
-                        </li>
-                        <li className="float-left p-2 pl-4">
                             <Link href="/project">Project</Link>
                         </li>
                         <li className="float-left p-2 pl-4">
@@ -36,13 +33,11 @@ export default function Header() {
                     </ul>
                 </nav>
             </header>
-            <div className={`bg-white z-10 absolute left-0 right-0 top-0 bottom-0 ${showMenu ? 'flex' : 'hidden'}`}>
+            <div className={`bg-white z-30 absolute left-0 right-0 top-0 bottom-0 ${showMenu ? 'flex' : 'hidden'}`}>
                 <div className="flex-col py-7 px-6 flex w-full">
-                    <button onClick={() => setShowMenu(!showMenu)} className="flex ml-auto"><Rsicon icon="fas bars" classname="h-8 w-8"></Rsicon></button>
+                    <button onClick={() => setShowMenu(!showMenu)} className="flex ml-auto"><Rsicon icon="fas bars" classname="h-8 w-8 text-black"></Rsicon></button>
                     <div className="flex text-black flex-col items-center gap-10 font-semibold text-2xl">
                         <Link href="/">Home</Link>
-                        <Link href="/about">About</Link>
-                        {/* <Link href="">Skills</Link> */}
                         <Link href="/project">Project</Link>
                         <Link href="/contact">Contact</Link>
                     </div>
