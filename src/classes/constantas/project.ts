@@ -2,6 +2,26 @@ import { Enumsource } from "~/interfaces/project/project-list";
 
 export const project = [
     {
+        title: "sefest 2025",
+        desc: "website pendaftaran lomba",
+        slug: "sefest-2025",
+        HeroImage: "/asset/project/MestiMinum/sefesttus.jpg",
+        github: "", 
+        preview: "https://sefesttusurabaya.my.id/",
+        source: Enumsource.Close,
+        tools: [{img: "/asset/tools/laravel.svg", link:"https://laravel.com/", alt: "laravel"}]
+    },
+    {
+        title: "Mesti Minum",
+        desc: "Adalah sebuah website jual beli minuman untuk umkm",
+        slug: "mesti-minum",
+        HeroImage: "/asset/project/MestiMinum/mestiminum.jpg",
+        preview: "",
+        github: "",
+        source: Enumsource.Close,
+        tools: [{img: "/asset/tools/laravel.svg", link:"https://laravel.com/", alt: "laravel"},{img: "/asset/tools/livewire.svg", link:"https://livewire.laravel.com/", alt: "Livewire"}]
+    },
+    {
         title: "Ecommerce desa panjunan",
         desc: "pengabdian masyarakat desa panjunan",
         slug: "ecomm-desa-panjunan",
@@ -10,16 +30,6 @@ export const project = [
         preview: "https://umkm-desapanjunan.com/",
         source: Enumsource.Close,
         tools: [{img: "/asset/tools/laravel.svg", link:"https://laravel.com/", alt: "laravel"}]
-    },
-    {
-        title: "next js chatbot",
-        desc: "trying make chatbot with ollama dependency",
-        slug: "chat-app",
-        HeroImage: "/asset/project/ReactChatbot/Screenshot_naura_chatbot.png",
-        github: "https://github.com/rsiyun/React-Chatbot-Ollama",
-        preview: "",
-        source: Enumsource.Open,
-        tools: [{img: "/asset/tools/next-js.svg", alt:"Nextjs", link:"https://nextjs.org/"}, {img: "/asset/tools/ollama.png", alt:"Ollama", link:"https://ollama.com/"}],
     },
     {
         title: "Darmawisata Indonesia mobile app",
@@ -32,14 +42,14 @@ export const project = [
         tools: [{link: "https://angular.dev/", img: "https://v10.angular.io/assets/images/logos/angular/shield-large.svg", alt: "angular"}, {link: "https://ionicframework.com/", img: "/asset/tools/ionic.svg", alt: "ionic"}]
     },
     {
-        title: "Mesti Minum",
-        desc: "Adalah sebuah website jual beli minuman untuk umkm",
-        slug: "mesti-minum",
-        HeroImage: "/asset/project/MestiMinum/mestiminum.jpg",
+        title: "next js chatbot",
+        desc: "trying make chatbot with ollama dependency",
+        slug: "chat-app",
+        HeroImage: "/asset/project/ReactChatbot/Screenshot_naura_chatbot.png",
+        github: "https://github.com/rsiyun/React-Chatbot-Ollama",
         preview: "",
-        github: "",
-        source: Enumsource.Close,
-        tools: [{img: "/asset/tools/laravel.svg", link:"https://laravel.com/", alt: "laravel"},{img: "/asset/tools/livewire.svg", link:"https://livewire.laravel.com/", alt: "Livewire"}]
+        source: Enumsource.Open,
+        tools: [{img: "/asset/tools/next-js.svg", alt:"Nextjs", link:"https://nextjs.org/"}, {img: "/asset/tools/ollama.png", alt:"Ollama", link:"https://ollama.com/"}],
     },
     {
         title: "weeding invitation system",
